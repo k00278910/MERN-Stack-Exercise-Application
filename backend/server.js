@@ -1,27 +1,23 @@
 require('dotenv').config()
-//  must create the express application inside the server js file 
+// server.js is the back-end entry point
+//  must register the express application inside the server js file 
 const express = require ('express')
-
+const workoutRouts = require ('./routs/workouts')
 // create express app
 const app = express()
 // * MIDDLEWARE
+// use express.json to POST & UPDATE to the DB
+app.use(express.json())
+
 // code that executes between request and response
-// this one will fire for every request
-// 'next' keyword allows the program to progress to ROUT HANDLER
+ // log requests after each request
 app.use((req, res, next) => {
-    // log requests
 console.log(req.path, req.method)
-next()
+next() // allows program to progress
 })
 
-// * ROUT HANDLER
-// if you go to localhost:4000 it will send a get request to the server
-// the server responds by displaying the json message
-app.get('/',(req,res)=>{
-    // the response will send a json string message
-    res.json({mssg:'Welcome to the app!'})
-})
-
+// * ROUTES (attaches all the routs to the app)
+app.use('/api/workouts', workoutRouts)
 
 // * LISTEN
 // listen on port, then fire a function */
