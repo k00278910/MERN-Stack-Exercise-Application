@@ -1,0 +1,10 @@
+Already included file name 'c:/Users/antho/MERN_STACK/Exercise_Application_MERN_Stack/backend/models/workoutModel.js' differs from file name 'c:/Users/antho/MERN_STACK/Exercise_Application_MERN_Stack/backend/models/WorkoutModel.js' only in casing.
+  The file is in the program because:
+    Imported via '../models/workoutModel' from file
+
+
+const workout = require ('../models/workoutModel')
+
+C:\Users\antho\MERN_STACK\Exercise_Application_MERN_Stack\backend\routs\workouts.js
+
+C:\Users\antho\MERN_STACK\Exercise_Application_MERN_Stack\backend\models\workoutModel.js
