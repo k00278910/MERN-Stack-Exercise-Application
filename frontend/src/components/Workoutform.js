@@ -1,8 +1,11 @@
 
 import {useState} from 'react'
+import { useWorkoutsContext } from "../hooks/useWorkoutsContext"
 
 
 const Workoutform = ()=>{
+    // avoid homepage refresh to display new workout
+    const { dispatch } = useWorkoutsContext()
     // state is updated when user enters input
 const [title,setTitle]=useState('')
 const [load,setLoad]=useState('')
@@ -31,6 +34,9 @@ if(response.ok){
     setReps('')
     setError(null)
     console.log('new workout added',json)
+    // avoid homepage refresh to display new workout
+    // adds workout to global context state
+    dispatch({type: 'CREATE_WORKOUT', payload: json})
 }
 
 }
