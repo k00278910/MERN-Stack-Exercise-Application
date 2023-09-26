@@ -9,6 +9,3 @@ This repository showcases the power of the MERN (MongoDB, Express.js, React.js, 
 
 *RESTful API: The backend, built with Node.js and Express.js, exposes a RESTful API for communication between the frontend and backend components.
 
-*Authentication: User authentication is implemented to demonstrate how to secure your web application.
-
-*Data Visualization: Incorporates data visualization libraries like Chart.js or D3.js to display data insights in a user-friendly manner.
